@@ -11,7 +11,7 @@ namespace KoreanAIO.Champions
 {
     public class Cassiopeia : ChampionBase
     {
-        Obj_AI_Base.OnBasicAttack += Obj_AI_Base_OnBasicAttack
+        Obj_AI_Base.OnBasicAttack += Obj_AI_Base_OnBasicAttack;
         public Dictionary<int, bool> CachedPoisoned = new Dictionary<int, bool>();
 
         public Cassiopeia()
