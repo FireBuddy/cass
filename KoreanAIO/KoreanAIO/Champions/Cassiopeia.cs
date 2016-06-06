@@ -348,7 +348,7 @@ namespace KoreanAIO.Champions
 
         protected override void LastHit(Menu menu)
         {
-        Obj_AI_Base.OnBasicAttack += Obj_AI_Base_OnBasicAttack
+       
             if (menu.Slider("LastHit.E") > 0)
             {
                 var minion = E.LastHit(LastHitType.Always, false).FirstOrDefault();
