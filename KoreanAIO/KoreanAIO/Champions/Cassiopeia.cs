@@ -192,24 +192,7 @@ namespace KoreanAIO.Champions
             base.PermaActive();
         }
         
-        private static void Obj_AI_Base_OnBasicAttack(Obj_AI_Base Sender, GameObjectProcessSpellCastEventArgs args)
-        {
-            if (Sender == null || !Orbwalker.ActiveModesFlags.HasFlag(Orbwalker.ActiveModes.LastHit))
-            {
-               return;
-            }
-            if (!Sender.IsDashing() && Sender.Type == GameObjectType.AIHeroClient && Sender.IsValidTarget(Q.Range) && Q.IsReady() && Sender.IsEnemy)
-            {
-                if (ObjectManager.Player.Position.Distance(Target.ServerPosition) <= 700)
-                {
-                    Q.Cast(Sender.ServerPosition + 50);
-                }
-                if (ObjectManager.Player.Position.Distance(Target.ServerPosition) > 700)
-                {
-                    Q.Cast(Player.Instance.Position.Extend(Target.ServerPosition, 760).To3D());
-                }
-            } 
-        }
+
         protected override void KillSteal(Menu menu)
         {
             foreach (var enemy in UnitManager.ValidEnemyHeroesInRange.Where(h => h.HealthPercent <= 40f))
