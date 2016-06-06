@@ -195,7 +195,6 @@ namespace KoreanAIO.Champions
         protected virtual void LaneClear(Menu menu)
         {
             LastHit(menu);
-            Champions.Cassiopeia.Obj_AI_Base.OnBasicAttack += Obj_AI_Base_OnBasicAttack
         }
 
         protected virtual void JungleClear(Menu menu)
