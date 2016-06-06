@@ -102,7 +102,7 @@ namespace KoreanAIO.Champions
             Q.AddConfigurableHitChancePercent();
             W.AddConfigurableHitChancePercent();
             R.AddConfigurableHitChancePercent();
-            Obj_AI_Base.OnBasicAttack += Obj_AI_Base_OnBasicAttack;
+            
 
             MenuManager.AddSubMenu("Combo");
             {
