@@ -91,7 +91,7 @@ namespace KoreanAIO
                     }
                 };
                 */
-                //LoadChampion(MyHero.Hero);
+                LoadChampion(MyHero.Hero);
             };
         }
 
