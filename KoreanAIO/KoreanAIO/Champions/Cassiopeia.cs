@@ -181,6 +181,9 @@ namespace KoreanAIO.Champions
             }
             if (KeysMenu.KeyBind("AssistedUltimate"))
             {
+                var countFace =
+                    EntityManager.Heroes.Enemies.Count(
+                        h => h.IsValidTarget(R.Range) && h.IsFacing(Player.Instance));
                 var enemyNear =
                     UnitManager.ValidEnemyHeroesInRange.OrderBy(client => client.Distance(MousePos, true))
                         .FirstOrDefault();
