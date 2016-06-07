@@ -187,7 +187,7 @@ namespace KoreanAIO.Champions
                 var enemyNear =
                     UnitManager.ValidEnemyHeroesInRange.OrderBy(client => client.Distance(MousePos, true))
                         .FirstOrDefault();
-                if (countFace => 1 && enemyNear != null)
+                if (countFace >= 1 && enemyNear != null)
                 {
                     R.Cast(enemyNear);
                 }
