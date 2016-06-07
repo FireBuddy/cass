@@ -373,7 +373,7 @@ namespace KoreanAIO.Champions
                         return;
                     }
                 }
-                Q.Cast(target + 50);
+                Q.Cast(target);
             }
         }
         public void CastQ2(Obj_AI_Base target)
@@ -396,7 +396,8 @@ namespace KoreanAIO.Champions
                         return;
                     }
                 }
-                Q.Cast(target);
+                var qPred = Spells.Q.GetPrediction(target);
+                Q.Cast(qPred.CastPosition + 50);
             }
         }
 
