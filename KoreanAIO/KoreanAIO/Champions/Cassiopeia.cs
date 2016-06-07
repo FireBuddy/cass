@@ -236,11 +236,11 @@ namespace KoreanAIO.Champions
                 }
                 if (menu.CheckBox("Q"))
                 {
-                    CastQ(Target);
+                    CastQ2(Target);
                 }
                 if (menu.CheckBox("W"))
                 {
-                    CastW(Target);
+                    CastW2(Target);
                 }
                 if (menu.Slider("R") > 0)
                 {
@@ -397,7 +397,7 @@ namespace KoreanAIO.Champions
                     }
                 }
                 var qPred = Q.GetPrediction(target);
-                Q.Cast(target);
+                Q.Cast(qPred.CastPosition + 50);
             }
         }
 
@@ -426,6 +426,31 @@ namespace KoreanAIO.Champions
                 W.Cast(target);
             }
         }
+        public void CastW2(Obj_AI_Base target)
+        {
+            if (W.IsReady && target != null)
+            {
+                if (Q.IsReady && IsPoisoned(target) && E.IsReady)
+                {
+                    return;
+                }
+                if (Q.LastSentTime > 0)
+                {
+                    var arrivalTime = Q.GetArrivalTime(Q.LastEndPosition);
+                    if (Core.GameTickCount - Q.LastSentTime <= arrivalTime)
+                    {
+                        return;
+                    }
+                    if (Q.LastCastTime > 0 && Core.GameTickCount - Q.LastCastTime <= arrivalTime)
+                    {
+                        return;
+                    }
+                }
+                var wPred = W.GetPrediction(target);
+                W.Cast(wPred.CastPosition + 50);
+            }
+        }
+
 
         public void CastE(Obj_AI_Base target)
         {
