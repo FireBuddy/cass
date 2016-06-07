@@ -16,18 +16,18 @@ namespace KoreanAIO.Champions
 
         public Cassiopeia()
         {
-            Q = new SpellBase(SpellSlot.Q, SpellType.Circular, 800)
+            Q = new SpellBase(SpellSlot.Q, SpellType.Circular, 850)
             {
                 Width = 130,
                 CastDelay = 400
             };
-            W = new SpellBase(SpellSlot.W, SpellType.Circular, 800)
+            W = new SpellBase(SpellSlot.W, SpellType.Circular, 900)
             {
                 Width = 180,
                 CastDelay = 250,
                 Speed = 3000
             };
-            E = new SpellBase(SpellSlot.E, SpellType.Targeted, 750)
+            E = new SpellBase(SpellSlot.E, SpellType.Targeted, 730)
             {
                 Speed = 1900,
                 CastDelay = 125
