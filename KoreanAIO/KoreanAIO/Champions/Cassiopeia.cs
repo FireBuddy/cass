@@ -381,7 +381,7 @@ namespace KoreanAIO.Champions
         {
             if (W.IsReady && target != null)
             {
-                if (IsPoisoned(target) && E.IsReady)
+                if (Q.IsReady && IsPoisoned(target) && E.IsReady)
                 {
                     return;
                 }
