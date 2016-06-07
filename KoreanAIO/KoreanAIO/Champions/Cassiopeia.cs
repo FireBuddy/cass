@@ -183,7 +183,7 @@ namespace KoreanAIO.Champions
             {
                 var countFace =
                     EntityManager.Heroes.Enemies.Count(
-                        h => h.IsValidTarget(R.Range) && h.IsFacing(Player.Instance) && Player.IsFacing(h.Instance));
+                        h => h.IsValidTarget(R.Range) && h.IsFacing(Player.Instance) && Player.IsFacing(h.Position));
                 var enemyNear =
                     UnitManager.ValidEnemyHeroesInRange.OrderBy(client => client.Distance(MousePos, true))
                         .FirstOrDefault();
