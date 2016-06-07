@@ -373,6 +373,29 @@ namespace KoreanAIO.Champions
                         return;
                     }
                 }
+                Q.Cast(target + 50);
+            }
+        }
+        public void CastQ2(Obj_AI_Base target)
+        {
+            if (Q.IsReady && target != null)
+            {
+                if (IsPoisoned(target) && E.IsReady)
+                {
+                    return;
+                }
+                if (W.LastSentTime > 0)
+                {
+                    var arrivalTime = W.GetArrivalTime(W.LastEndPosition);
+                    if (Core.GameTickCount - W.LastSentTime <= arrivalTime)
+                    {
+                        return;
+                    }
+                    if (W.LastCastTime > 0 && Core.GameTickCount - W.LastCastTime <= arrivalTime)
+                    {
+                        return;
+                    }
+                }
                 Q.Cast(target);
             }
         }
