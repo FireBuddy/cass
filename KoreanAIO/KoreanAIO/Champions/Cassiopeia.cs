@@ -376,30 +376,7 @@ namespace KoreanAIO.Champions
                 Q.Cast(target);
             }
         }
-        public void CastQ2(Obj_AI_Base target)
-        {
-            if (Q.IsReady && target != null)
-            {
-                if (IsPoisoned(target) && E.IsReady)
-                {
-                    return;
-                }
-                if (W.LastSentTime > 0)
-                {
-                    var arrivalTime = W.GetArrivalTime(W.LastEndPosition);
-                    if (Core.GameTickCount - W.LastSentTime <= arrivalTime)
-                    {
-                        return;
-                    }
-                    if (W.LastCastTime > 0 && Core.GameTickCount - W.LastCastTime <= arrivalTime)
-                    {
-                        return;
-                    }
-                }
-                var qPred = Spells.Q.GetPrediction(target);
-                Q.Cast(qPred.CastPosition + 50);
-            }
-        }
+
 
         public void CastW(Obj_AI_Base target)
         {
