@@ -450,7 +450,10 @@ namespace KoreanAIO.Champions
                     }
                 }
                 var wPred = W.GetPrediction(target);
-                W.Cast(wPred.CastPosition + 50);
+                if (Player.Instance.Distance(wPred.CastPosition) > 400)
+                   {
+                       W.Cast(wPred.CastPosition + 50);
+                   }
             }
         }
 
