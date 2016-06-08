@@ -93,7 +93,7 @@ namespace KoreanAIO.Champions
                         new KeyBind("LastHit Toggle", false, KeyBind.BindTypes.PressToggle, 'L')),
                     delegate
                     {
-                        if (!ModeManager.Combo)
+                        if (!ModeManager.LastHit)
                         {
                             LastHit(ClearMenu);
                         }
