@@ -209,7 +209,7 @@ namespace KoreanAIO.Champions
                 {
                     W.Cast(enemy);
                 }
-                if (menu.CheckBox("E") && (result.E || E.IsKillable(enemy)))
+                if (menu.CheckBox("E") && (result.E || E.IsKillable(enemy)) && (ModeManager.Combo || ModeManager.Harass))
                 {
                     E.Cast(enemy);
                 }
