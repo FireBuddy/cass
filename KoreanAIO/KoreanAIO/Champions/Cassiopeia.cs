@@ -409,7 +409,7 @@ namespace KoreanAIO.Champions
                     }
                 }
                 var qPred = Q.GetPrediction(target);
-                Q.Cast(qPred.CastPosition + 50);
+                Q.Cast(qPred.CastPosition + 30);
             }
         }
 
