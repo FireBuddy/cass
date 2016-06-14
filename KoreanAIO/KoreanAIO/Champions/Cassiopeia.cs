@@ -271,7 +271,7 @@ namespace KoreanAIO.Champions
             {
                 if (Target != null)
                 {
-                    if (menu.CheckBox("Q"))
+                    if (!KeysMenu.KeyBind("HarassToggle") && menu.CheckBox("Q"))
                     {
                         CastQ(Target);
                     }
