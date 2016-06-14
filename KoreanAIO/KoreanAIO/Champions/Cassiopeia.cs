@@ -76,7 +76,7 @@ namespace KoreanAIO.Champions
             
             Obj_AI_Base.OnBasicAttack += delegate (Obj_AI_Base sender, GameObjectProcessSpellCastEventArgs args)
             {
-                if (ModeManager.Harass && sender.IsEnemy && sender.Type == GameObjectType.AIHeroClient && sender.IsValidTarget(800) && Q.IsReady)
+                if (KeysMenu.KeyBind("HarassToggle") && sender.IsEnemy && sender.Type == GameObjectType.AIHeroClient && sender.IsValidTarget(800) && Q.IsReady)
                 {
                   Q.Cast(sender.ServerPosition + 20);
                 }
@@ -88,7 +88,7 @@ namespace KoreanAIO.Champions
                 KeysMenu.AddValue("AssistedUltimate",
                     new KeyBind("Assisted Ultimate", false, KeyBind.BindTypes.HoldActive, 'T'));
                 ToggleManager.RegisterToggle(
-                    KeysMenu.AddValue("HarassToggle",
+                    KeysMenu.AddValue("HarassToggle"o,
                         new KeyBind("Harass Toggle", false, KeyBind.BindTypes.PressToggle, 'K')),
                     delegate
                     {
