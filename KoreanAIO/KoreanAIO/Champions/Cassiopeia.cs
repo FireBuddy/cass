@@ -94,7 +94,7 @@ namespace KoreanAIO.Champions
                     {
                         if (!ModeManager.Combo)
                         {
-                            Harass(HarassMenu);
+                            
                         }
                     });
                 ToggleManager.RegisterToggle(
