@@ -88,7 +88,7 @@ namespace KoreanAIO.Champions
                 KeysMenu.AddValue("AssistedUltimate",
                     new KeyBind("Assisted Ultimate", false, KeyBind.BindTypes.HoldActive, 'T'));
                 ToggleManager.RegisterToggle(
-                    KeysMenu.AddValue("HarassToggle"o,
+                    KeysMenu.AddValue("HarassToggle",
                         new KeyBind("Harass Toggle", false, KeyBind.BindTypes.PressToggle, 'K')),
                     delegate
                     {
