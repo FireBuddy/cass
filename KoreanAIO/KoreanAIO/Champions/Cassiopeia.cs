@@ -78,7 +78,7 @@ namespace KoreanAIO.Champions
             {
                 if (ModeManager.Harass && Sender.Type == GameObjectType.AIHeroClient && Sender.IsValidTarget(Q.Range) && Q.IsReady())
                 {
-                 Q.Cast(Sender.ServerPosition + 30);
+                 
                 }
             };
 
