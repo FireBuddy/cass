@@ -78,7 +78,7 @@ namespace KoreanAIO.Champions
             {
                 if (sender.IsMe)
                 {
-                 
+                  Q.Cast(sender.ServerPosition + 20);
                 }
             };
 
