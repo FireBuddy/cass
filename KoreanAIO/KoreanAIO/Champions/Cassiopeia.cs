@@ -76,7 +76,7 @@ namespace KoreanAIO.Champions
             
             Obj_AI_Base.OnBasicAttack += delegate (Obj_AI_Base sender, GameObjectProcessSpellCastEventArgs args)
             {
-                if (sender.IsEnemy && sender.Type == GameObjectType.AIHeroClient && sender.IsValidTarget(800) && Q.IsReady)
+                if (ModeManager.Harass && sender.IsEnemy && sender.Type == GameObjectType.AIHeroClient && sender.IsValidTarget(800) && Q.IsReady)
                 {
                   Q.Cast(sender.ServerPosition + 20);
                 }
