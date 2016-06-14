@@ -496,7 +496,7 @@ namespace KoreanAIO.Champions
                         }
                     }
                 }
-                if (canCast)
+                if (canCast || ObjectManager.Player.Level < 2)
                 {
                     E.Cast(target);
                 }
