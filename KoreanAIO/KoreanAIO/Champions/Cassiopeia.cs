@@ -410,7 +410,7 @@ namespace KoreanAIO.Champions
         {
             if (W.IsReady && target != null)
             {
-                if (Q.IsReady && IsPoisoned(target) && E.IsReady)
+                if (IsPoisoned(target) && E.IsReady)
                 {
                     return;
                 }
