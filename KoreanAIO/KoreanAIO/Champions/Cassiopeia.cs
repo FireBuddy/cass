@@ -97,16 +97,7 @@ namespace KoreanAIO.Champions
                             
                         }
                     });
-                ToggleManager.RegisterToggle(
-                    KeysMenu.AddValue("LastHitToggle",
-                        new KeyBind("LastHit Toggle", false, KeyBind.BindTypes.PressToggle, 'L')),
-                    delegate
-                    {
-                        if (!ModeManager.Combo)
-                        {
-                            LastHit(ClearMenu);
-                        }
-                    });
+
             }
             Q.AddConfigurableHitChancePercent();
             W.AddConfigurableHitChancePercent();
