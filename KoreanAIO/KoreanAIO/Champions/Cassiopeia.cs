@@ -496,7 +496,7 @@ namespace KoreanAIO.Champions
                         }
                     }
                 }
-                if (canCast || ObjectManager.Player.Level < 2)
+                if (canCast || (ObjectManager.Player.Level < 2 && MyHero.ManaPercent >= 80))
                 {
                     E.Cast(target);
                 }
