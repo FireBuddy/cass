@@ -220,6 +220,17 @@ namespace KoreanAIO.Champions
             }
             base.KillSteal(menu);
         }
+        
+        protected override void Flee()
+        {
+            if (Q.IsReady)
+            {
+                {
+                    CastE(Target);
+                }
+            }
+            base.Flee();
+        }
 
         protected override void Combo(Menu menu)
         {
