@@ -56,14 +56,7 @@ namespace KoreanAIO.Champions
                 }
             };
             
-            Dash.OnDash += delegate (Obj_AI_Base sender, Dash.DashEventArgs args)
-            {
-                if (sender.IsEnemy && args.EndPos.Distance(MyHero, true) <= sender.Distance(MyHero, true))
-                {
-                    CastW(sender);
 
-                }
-            };
 
             Obj_AI_Base.OnProcessSpellCast += delegate (Obj_AI_Base sender, GameObjectProcessSpellCastEventArgs args)
             {
