@@ -221,6 +221,14 @@ namespace KoreanAIO.Champions
             base.KillSteal(menu);
         }
         
+        Gapcloser.OnGapcloser += delegate (AIHeroClient sender, Gapcloser.GapcloserEventArgs args)
+            {
+                if (sender.IsEnemy && args.End.Distance(MyHero, true) <= sender.Distance(MyHero, true))
+                {
+                    CastW(sender);
+                }
+        };
+        
         protected override void Flee()
         {
             if (Q.IsReady)
