@@ -221,10 +221,7 @@ namespace KoreanAIO.Champions
             base.KillSteal(menu);
         }
         
-        Gapcloser.OnGapcloser += delegate (AIHeroClient sender, Gapcloser.GapcloserEventArgs args)
-        {
 
-        };
         
         protected override void Flee()
         {
