@@ -56,11 +56,12 @@ namespace KoreanAIO.Champions
                 }
             };
             
-            Gapcloser.OnGapcloser += delegate (AIHeroClient sender, Gapcloser.GapcloserEventArgs args)
+            Dash.OnDash += delegate (Obj_AI_Base sender, Dash.DashEventArgs args)
             {
-                if (sender.IsEnemy)
+                if (sender.IsEnemy && args.EndPos.Distance(MyHero, true) <= sender.Distance(MyHero, true))
                 {
                     CastW(sender);
+
                 }
             };
 
