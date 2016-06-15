@@ -222,7 +222,7 @@ namespace KoreanAIO.Champions
         }
         
         Gapcloser.OnGapcloser += delegate (AIHeroClient sender, Gapcloser.GapcloserEventArgs args)
-            {
+        {
                 if (sender.IsEnemy && args.End.Distance(MyHero, true) <= sender.Distance(MyHero, true))
                 {
                     CastW(sender);
