@@ -59,7 +59,7 @@ namespace KoreanAIO.Champions
             
             Gapcloser.OnGapcloser += delegate (AIHeroClient sender, Gapcloser.GapcloserEventArgs args)
             {
-                if (sender.IsEnemy && (ModeManager.Harass || ModeManager.Flee) && args.End.Distance(MyHero, true) <= 600 && args.End.Distance(MyHero, true) > 400)
+                if (sender.IsEnemy && (ModeManager.Harass || ModeManager.Flee) && args.End.Distance(MyHero, true) <= 700 && args.End.Distance(MyHero, true) > 500)
                     {
                         CastW(sender);
                     }
