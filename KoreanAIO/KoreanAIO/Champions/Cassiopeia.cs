@@ -65,14 +65,13 @@ namespace KoreanAIO.Champions
                 }
                 else if (sender.IsEnemy)
                 {
-                foreach (
-                    var ally in
-                        EntityManager.Heroes.Allies.Where(ally => sender.IsFacing(ally))
-                {
-                        {
-                            CastW(sender);
-                        }
-                }
+                    foreach (
+                        var ally in
+                            EntityManager.Heroes.Allies.Where(ally => sender.IsFacing(ally))
+                    {
+                                CastW(sender);
+                    }
+                    
                 }
                 
             };
