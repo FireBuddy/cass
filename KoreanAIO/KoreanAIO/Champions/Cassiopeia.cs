@@ -67,7 +67,7 @@ namespace KoreanAIO.Champions
                 {
                     if (sender.IsEnemy)
                     {
-
+                        CastW(sender);
                     }
                     
                 }
