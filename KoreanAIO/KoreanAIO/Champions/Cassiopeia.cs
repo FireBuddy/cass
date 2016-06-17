@@ -64,7 +64,7 @@ namespace KoreanAIO.Champions
                         CastW(sender);
                     }
                 
-                else if (sender.IsEnemy)
+                else if (sender.IsEnemy && (ModeManager.Harass || ModeManager.Flee))
                 foreach (
                     var ally in
                         EntityManager.Heroes.Allies.Where(ally => sender.IsFacing(ally)))
