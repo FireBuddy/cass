@@ -484,9 +484,14 @@ namespace KoreanAIO.Champions
                     }
                 }
                 var wPred = W.GetPrediction(target);
-                if (Player.Instance.Distance(wPred.CastPosition) > 400)
+                if (Player.Instance.Distance(wPred.CastPosition) > 499)
+                   if (target.IsFacing(MyHero))
                    {
-                       W.Cast(wPred.CastPosition + 50);
+                       W.Cast(wPred.CastPosition);
+                   }
+                   else 
+                   {
+                       W.Cast(wPred.CastPosition + 70);
                    }
             }
         }
