@@ -63,13 +63,14 @@ namespace KoreanAIO.Champions
                 
                 foreach (
                     var ally in
-                        EntityManager.Heroes.Allies.Where(ally => sender.IsFacing(ally))
-                if (sender.IsEnemy && (ModeManager.Harass || ModeManager.Flee))
+                        EntityManager.Heroes.Allies.Where(ally => sender.IsFacing(ally)))
                 {
-                            CastW(sender);
-                }
+                    if (sender.IsEnemy)
+                    {
+
+                    }
                     
-                
+                }
             };
             
             Obj_AI_Base.OnProcessSpellCast += delegate (Obj_AI_Base sender, GameObjectProcessSpellCastEventArgs args)
