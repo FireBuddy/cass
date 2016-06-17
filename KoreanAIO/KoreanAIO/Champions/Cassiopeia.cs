@@ -61,10 +61,14 @@ namespace KoreanAIO.Champions
             {
                 if (sender.IsEnemy && (ModeManager.Harass || ModeManager.Flee) && args.End.Distance(MyHero, true) <= 600 && args.End.Distance(MyHero, true) > 400)
                 {
-                    CastW(sender);
+                    foreach (
+                        var ally in
+                            EntityManager.Heroes.Allies.Where(ally => sender.IsFacing(ally))
+                    {
+                                CastW(sender);
+                    }
+                    
                 }
-
-                
             };
             
             Obj_AI_Base.OnProcessSpellCast += delegate (Obj_AI_Base sender, GameObjectProcessSpellCastEventArgs args)
