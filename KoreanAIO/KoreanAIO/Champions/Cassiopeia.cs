@@ -237,7 +237,7 @@ namespace KoreanAIO.Champions
             if (Q.IsReady)
             {
                 {
-                    CastE(Target);
+                    CastQ(Target);
                 }
             }
             base.Flee();
