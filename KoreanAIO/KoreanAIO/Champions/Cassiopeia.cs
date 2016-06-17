@@ -68,7 +68,7 @@ namespace KoreanAIO.Champions
                         EntityManager.Heroes.Allies.Where(ally => sender.IsFacing(ally))
                 {
                         {
-                            CastW(W.GetPrediction(sender).CastPosition);
+                            CastW(sender);
                         }
                 }
                 
