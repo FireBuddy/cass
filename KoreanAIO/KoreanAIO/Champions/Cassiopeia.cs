@@ -63,6 +63,15 @@ namespace KoreanAIO.Champions
                 {
                     CastW(sender);
                 }
+                foreach (
+                    var ally in
+                        EntityManager.Heroes.Allies.Where(ally => sender.IsFacing(ally))
+                {
+                        {
+                            CastW(W.GetPrediction(sender).CastPosition);
+                        }
+                }
+                
             };
             
             Obj_AI_Base.OnProcessSpellCast += delegate (Obj_AI_Base sender, GameObjectProcessSpellCastEventArgs args)
