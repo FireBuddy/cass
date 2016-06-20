@@ -134,7 +134,7 @@ namespace KoreanAIO.Champions
             
             Obj_AI_Base.OnBasicAttack += delegate (Obj_AI_Base sender, GameObjectProcessSpellCastEventArgs args)
             {
-                if (ModeManager.LastHit && sender.IsValidTarget(950) && Q.IsReady  && sender.IsEnemy && sender.Type == GameObjectType.AIHeroClient)
+                if (sender == Target && ModeManager.LastHit && sender.IsValidTarget(950) && Q.IsReady  && sender.IsEnemy && sender.Type == GameObjectType.AIHeroClient)
                 {
                     if (sender.IsValidTarget(825))
                     {
@@ -143,8 +143,15 @@ namespace KoreanAIO.Champions
                     if (sender.IsValidTarget(950))
                     {
                          CastW(sender);
+                         CastW(sender);
+                         CastW(sender);
+                         CastW(sender);
                     }
-                  
+                    if (sender.IsValidTarget(1300))
+                    {
+                         CastE(sender);
+
+                    }
                  }
             };
             
