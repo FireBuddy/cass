@@ -516,7 +516,7 @@ namespace KoreanAIO.Champions
             }
             base.LastHit(menu);
             
-            if (IsW2)
+            if (IsW2 && Target.IsValidTarget(950))
             {
                  W.Cast(Target);
             }
