@@ -134,7 +134,7 @@ namespace KoreanAIO.Champions
             
             Obj_AI_Base.OnBasicAttack += delegate (Obj_AI_Base sender, GameObjectProcessSpellCastEventArgs args)
             {
-                if (sender == Target && (ModeManager.LastHit || ModeManager.Flee || ModeManager.Harass) && sender.IsValidTarget(1300) && sender.IsEnemy && sender.Type == GameObjectType.AIHeroClient)
+                if (sender == Target && (ModeManager.LastHit || ModeManager.Flee || ModeManager.Harass || ModeManager.LaneClear) && sender.IsValidTarget(1300) && sender.IsEnemy && sender.Type == GameObjectType.AIHeroClient)
                 {
                     if (Q.IsReady && sender.IsValidTarget(825))
                     {
@@ -178,7 +178,7 @@ namespace KoreanAIO.Champions
                     }
                 }
                 {
-                if (!sender.IsDashing() && sender == Target && (ModeManager.LastHit || ModeManager.Flee || ModeManager.Harass) && sender.IsValidTarget(1300) && Q.IsReady  && sender.IsEnemy && sender.Type == GameObjectType.AIHeroClient)
+                if (!sender.IsDashing() && sender == Target && (ModeManager.LastHit || ModeManager.Flee || ModeManager.Harass || ModeManager.LaneClear) && sender.IsValidTarget(1300) && Q.IsReady  && sender.IsEnemy && sender.Type == GameObjectType.AIHeroClient)
                 {    
                     if (Q.IsReady && sender.IsValidTarget(825))
                     {
