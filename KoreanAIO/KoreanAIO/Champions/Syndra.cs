@@ -515,6 +515,11 @@ namespace KoreanAIO.Champions
                 Q.LastHit((LastHitType)menu.Slider("LastHit.Q"));
             }
             base.LastHit(menu);
+            
+            if (IsW2)
+            {
+                 W.Cast(Target);
+            }
         }
 
 
