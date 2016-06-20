@@ -137,7 +137,7 @@ namespace KoreanAIO.Champions
                 if (ModeManager.LastHit && sender.IsValidTarget(800) && Q.IsReady  && sender.IsEnemy && sender.Type == GameObjectType.AIHeroClient)
                 {
                   Q.Cast(sender.ServerPosition);
-                  CastW(Sender);
+                  CastW(sender);
                   
                 }
             };
