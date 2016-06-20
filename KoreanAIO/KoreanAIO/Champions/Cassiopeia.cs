@@ -71,7 +71,7 @@ namespace KoreanAIO.Champions
                 {
 //
                     {
-                        CastW(sender);
+                        W.Cast(sender);
                     }
                     
                 }
