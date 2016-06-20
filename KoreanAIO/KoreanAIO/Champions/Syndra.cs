@@ -140,7 +140,7 @@ namespace KoreanAIO.Champions
                     {
                         Q.Cast(sender.ServerPosition);
                     }
-                    if (W.IsReady && sender.IsValidTarget(950))
+                    if (W.IsReady && sender.IsValidTarget(900))
                     {
                          CastW(sender);
                          CastW(sender);
@@ -516,6 +516,13 @@ namespace KoreanAIO.Champions
             }
             base.LastHit(menu);
         }
+        {
+                    if (IsW2)
+                    {
+                        W.Cast(Target);
+                    }
+        }
+
 
         protected override void JungleClear(Menu menu)
         {
