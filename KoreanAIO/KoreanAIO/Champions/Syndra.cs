@@ -170,6 +170,20 @@ namespace KoreanAIO.Champions
                             break;
                     }
                 }
+                {
+                if (ModeManager.LastHit && sender.IsValidTarget(950) && Q.IsReady  && sender.IsEnemy && sender.Type == GameObjectType.AIHeroClient)
+                {
+                    if (sender.IsValidTarget(825))
+                    {
+                        Q.Cast(sender.ServerPosition);
+                    }
+                    if (sender.IsValidTarget(950))
+                    {
+                         CastW(sender);
+                    }
+                  
+                 }
+            }
             };
             GameObject.OnCreate += delegate (GameObject sender, EventArgs args)
             {
