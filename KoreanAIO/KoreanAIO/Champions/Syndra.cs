@@ -516,12 +516,6 @@ namespace KoreanAIO.Champions
             }
             base.LastHit(menu);
         }
-        {
-                    if (IsW2)
-                    {
-                        W.Cast(Target);
-                    }
-        }
 
 
         protected override void JungleClear(Menu menu)
