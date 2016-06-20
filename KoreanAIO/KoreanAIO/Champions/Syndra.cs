@@ -180,6 +180,9 @@ namespace KoreanAIO.Champions
                     if (sender.IsValidTarget(950))
                     {
                          CastW(sender);
+                         CastW(sender);
+                         CastW(sender);
+                         CastW(sender);
                     }
                   
                  }
