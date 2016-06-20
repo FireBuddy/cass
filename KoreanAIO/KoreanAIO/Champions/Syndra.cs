@@ -213,7 +213,7 @@ namespace KoreanAIO.Champions
             };
             Dash.OnDash += delegate (Obj_AI_Base sender, Dash.DashEventArgs args)
             {
-                if (sender.IsEnemy && AutomaticMenu.CheckBox("Gapcloser") && args.EndPos.Distance(MyHero, true) <= sender.Distance(MyHero, true))
+                if (sender.IsEnemy && AutomaticMenu.CheckBox("Gapcloser") && args.EndPos.Distance(MyHero, true) <= sender.Distance(MyHero, true)  && args.EndPos.Distance(MyHero, true) <= E.Range)
                 {
                     CastE(sender);
                     CastQE(sender);
