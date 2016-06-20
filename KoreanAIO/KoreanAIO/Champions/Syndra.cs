@@ -520,6 +520,11 @@ namespace KoreanAIO.Champions
             {
                  W.Cast(Target);
             }
+            if (!Target.CanMove && Target.IsValidTarget(950))
+            {
+                 Combo(Menu menu);
+            }
+            
         }
 
 
