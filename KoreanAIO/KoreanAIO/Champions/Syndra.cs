@@ -215,7 +215,7 @@ namespace KoreanAIO.Champions
             {
                 if (sender.IsEnemy && AutomaticMenu.CheckBox("Gapcloser") && args.EndPos.Distance(MyHero, true) <= sender.Distance(MyHero, true))
                 {
-                    CastE(sender);
+                    CastE(args.EndPos);
                     CastQE(sender);
                 }
             };
