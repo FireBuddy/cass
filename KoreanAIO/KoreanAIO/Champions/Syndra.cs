@@ -140,7 +140,7 @@ namespace KoreanAIO.Champions
                     {
                         Q.Cast(sender.ServerPosition);
                     }
-                    if (W.IsReady && sender.IsValidTarget(900))
+                    if (W.IsReady && sender.IsValidTarget(950))
                     {
                          CastW(sender);
                          CastW(sender);
