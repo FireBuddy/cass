@@ -61,7 +61,7 @@ namespace KoreanAIO.Champions
             {
                 if ((ModeManager.LastHit || ModeManager.Harass || ModeManager.Flee ) && sender.IsEnemy && args.End.Distance(MyHero, true) <= 900 && args.End.Distance(MyHero, true) > 500)
                     {
-                        W.Cast(sender);
+                        W.Cast(args.End);
                     }
                 
                 else if (sender.IsEnemy && (ModeManager.LastHit || ModeManager.Harass || ModeManager.Flee) && args.End.Distance(MyHero, true) <= 850 )
