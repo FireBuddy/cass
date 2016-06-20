@@ -205,7 +205,7 @@ namespace KoreanAIO.Champions
             };
             Gapcloser.OnGapcloser += delegate (AIHeroClient sender, Gapcloser.GapcloserEventArgs args)
             {
-                if (sender.IsEnemy && AutomaticMenu.CheckBox("Gapcloser") && args.End.Distance(MyHero, true) <= sender.Distance(MyHero, true) && args.EndPos.Distance(MyHero, true) <= E.Range)
+                if (sender.IsEnemy && AutomaticMenu.CheckBox("Gapcloser") && args.End.Distance(MyHero, true) <= sender.Distance(MyHero, true))
                 {
                     E.Cast(args.End);
                     CastQE(sender);
