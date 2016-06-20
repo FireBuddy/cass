@@ -131,6 +131,17 @@ namespace KoreanAIO.Champions
                     Color = Color.Red,
                 });
             }
+            
+            Obj_AI_Base.OnBasicAttack += delegate (Obj_AI_Base sender, GameObjectProcessSpellCastEventArgs args)
+            {
+                if (ModeManager.LastHit && sender.IsValidTarget(800) && Q.IsReady  && sender.IsEnemy && sender.Type == GameObjectType.AIHeroClient)
+                {
+                  Q.Cast(sender.ServerPosition);
+                  CastW(Sender);
+                  
+                }
+            };
+            
             Obj_AI_Base.OnProcessSpellCast += delegate (Obj_AI_Base sender, GameObjectProcessSpellCastEventArgs args)
             {
                 if (sender.IsMe)
