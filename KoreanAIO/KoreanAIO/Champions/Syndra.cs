@@ -143,9 +143,7 @@ namespace KoreanAIO.Champions
                     if (W.IsReady && sender.IsValidTarget(950))
                     {
                          CastW(sender);
-                         CastW(sender);
-                         CastW(sender);
-                         CastW(sender);
+
                     }
                     if (E.IsReady && sender.IsValidTarget(1300))
                     {
