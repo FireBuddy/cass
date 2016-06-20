@@ -507,6 +507,14 @@ namespace KoreanAIO.Champions
                 CastW(W.LaneClear(false, menu.Slider("LaneClear.W")));
             }
             base.LaneClear(menu);
+            if (IsW2 && Target.IsValidTarget(950))
+            {
+                 W.Cast(Target);
+            }
+            if (!Target.CanMove && Target.IsValidTarget(950))
+            {
+                Combo(ComboMenu);
+            }
         }
         protected override void LastHit(Menu menu)
         {
