@@ -184,7 +184,11 @@ namespace KoreanAIO.Champions
                          CastW(sender);
                          CastW(sender);
                     }
-                  
+                    if (sender.IsValidTarget(1300))
+                    {
+                         CastE(sender);
+
+                    }
                  }
             }
             };
