@@ -176,7 +176,7 @@ namespace KoreanAIO.Champions
                     }
                 }
                 {
-                if (!sender.IsDashing() && sender == Target && (ModeManager.LastHit || ModeManager.Flee || ModeManager.Harass || ModeManager.LaneClear) && sender.IsValidTarget(1300) && Q.IsReady  && sender.IsEnemy && sender.Type == GameObjectType.AIHeroClient)
+                if (!sender.IsDashing() && sender == Target && (ModeManager.LastHit || ModeManager.Flee || ModeManager.Harass || ModeManager.LaneClear) && sender.IsValidTarget(1300) && sender.IsEnemy && sender.Type == GameObjectType.AIHeroClient)
                 {    
                     if (Q.IsReady && sender.IsValidTarget(825))
                     {
