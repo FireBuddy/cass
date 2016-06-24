@@ -28,6 +28,7 @@ namespace KoreanAIO.Champions
         public Text IsDeadText;
 
         public Obj_AI_Minion RShadow;
+        public Obj_AI_Minion SShadow;
 
         public Obj_AI_Minion WShadow;
         public float MarkedDamageReceived;
