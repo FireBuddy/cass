@@ -649,7 +649,7 @@ namespace KoreanAIO.Champions
                 }
                 else
                 {
-                    if (WShadowIsValid && WShadow.Distance(Target.ServerPosition) <= E.Radius && MyHero.ManaPercent >= menu.Slider("ManaPercent"))
+                    if (WShadowIsValid && WShadow.Distance(Target.ServerPosition) <= 290 && MyHero.ManaPercent >= menu.Slider("ManaPercent"))
                     {
                         E.Cast();
                         
