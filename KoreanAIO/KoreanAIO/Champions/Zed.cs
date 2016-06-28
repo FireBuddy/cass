@@ -60,6 +60,15 @@ namespace KoreanAIO.Champions
                 Color = Color.Red,
                 Position = new Vector2(100, 50)
             };
+            
+            Obj_AI_Base.OnBasicAttack += delegate (Obj_AI_Base sender, GameObjectProcessSpellCastEventArgs args)
+            {
+                if (ModeManager.Harass && sender.IsValidTarget(800) && W.IsReady && sender.IsEnemy && sender.Type == GameObjectType.AIHeroClient)
+                {
+                  W.Cast(sender.ServerPosition);
+                }
+            };
+            
             Obj_AI_Base.OnBuffGain += delegate (Obj_AI_Base sender, Obj_AI_BaseBuffGainEventArgs args)
             {
                 var minion = sender as Obj_AI_Minion;
