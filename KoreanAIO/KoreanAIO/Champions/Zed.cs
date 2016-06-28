@@ -654,7 +654,7 @@ namespace KoreanAIO.Champions
                         E.Cast();
                         
                     }
-                    if (WShadowIsValid && !E.IsReady())
+                    if (WShadowIsValid && !E.IsReady)
                     {
                         Q.Cast(Target);
                     }
