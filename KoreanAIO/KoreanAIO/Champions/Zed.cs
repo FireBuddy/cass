@@ -643,7 +643,7 @@ namespace KoreanAIO.Champions
                     {
                         return;
                     }
-                    CastW(Target);
+                   
                     CastE(Target);
                     CastQ(Target);
                 }
