@@ -65,7 +65,7 @@ namespace KoreanAIO.Champions
             {
                 if (ModeManager.Harass && sender.IsValidTarget(900) && W.IsReady && Q.IsReady &&  E.IsReady && IsW1 && sender.IsEnemy && sender.Type == GameObjectType.AIHeroClient)
                 {
-                 W.Cast(Player.Instance.Position.Extend(sender.ServerPosition, 900).To3D());
+                 W.Cast(sender.ServerPosition);
                 }
             };
             
