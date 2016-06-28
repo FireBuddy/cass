@@ -656,7 +656,7 @@ namespace KoreanAIO.Champions
                     }
                     if (WShadowIsValid && !E.IsReady)
                     {
-                        Q.Cast(Target);
+                        Q.Cast(Target.ServerPosition);
                     }
                 }
             }
