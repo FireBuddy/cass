@@ -649,7 +649,7 @@ namespace KoreanAIO.Champions
                 }
                 else
                 {
-                    if (IsW2 && MyHero.ManaPercent >= menu.Slider("ManaPercent"))
+                    if ( MyHero.ManaPercent >= menu.Slider("ManaPercent"))
                     {
                         CastE(Target);
                         CastQ(Target);
