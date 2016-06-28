@@ -654,6 +654,10 @@ namespace KoreanAIO.Champions
                         E.Cast();
                         
                     }
+                    if (WShadowIsValid && !E.IsReady())
+                    {
+                        Q.Cast(Target);
+                    }
                 }
             }
             base.Harass(menu);
