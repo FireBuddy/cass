@@ -21,7 +21,7 @@ namespace KoreanAIO.Champions
         public const string ShadowSkinName = "ZedShadow";
         public const string IsDeadName = "Zed_Base_R_buf_tell.troy";
 
-        
+        public static Spell.Skillshot Q2;
         public const int WRange = 900;
 
         public const int QReducedSqr = 693056; // (0.9 * Q.Range).Pow()
@@ -39,7 +39,7 @@ namespace KoreanAIO.Champions
 
         public Zed()
         {
-            
+            Q2 = new Spell.Skillshot(SpellSlot.Q, 1040, SkillShotType.Linear, 500, 1900, 60);
             Q = new SpellBase(SpellSlot.Q, SpellType.Linear, 900)
             {
                 CastDelay = 250,
@@ -71,7 +71,7 @@ namespace KoreanAIO.Champions
                      {
                          W.Cast(sender.ServerPosition);
                      }
-                     Q2 = new Spell(SpellSlot.Q, 900);
+                     
                      else if(Q.IsReady && IsW1)
                      {
                          Q.Cast(sender.ServerPosition);
