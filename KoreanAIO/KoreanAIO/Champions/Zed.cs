@@ -73,20 +73,23 @@ namespace KoreanAIO.Champions
             
             Obj_AI_Base.OnBasicAttack += delegate (Obj_AI_Base sender, GameObjectProcessSpellCastEventArgs args)
             {
-                if (ModeManager.Harass && sender.IsValidTarget(900) && sender.Type == GameObjectType.AIHeroClient && sender.IsEnemy)
-                {
-                     if(Q.IsReady &&  E.IsReady && IsW1  && W.IsReady)
+                if (ModeManager.Harass && args.Target != sender && sender.IsValidTarget(900) && W.IsReady && Q.IsReady &&  E.IsReady && IsW1 && sender.IsEnemy && sender.Type == GameObjectType.AIHeroClient)
                      {
                          W.Cast(sender.ServerPosition);
                      }
-                     else if(Q.IsReady && IsHarass2)
-                     {
-                         Q.Cast(sender.ServerPosition);
-                     }
-                 
 
-                }
             };
+            
+            Obj_AI_Base.OnBasicAttack += delegate (Obj_AI_Base sender, GameObjectProcessSpellCastEventArgs args)
+            {
+                if (ModeManager.Harass && args.Target != sender && sender.IsValidTarget(900) && W.IsReady && Q.IsReady &&  E.IsReady && IsW1 && sender.IsEnemy && sender.Type == GameObjectType.AIHeroClient)
+                     {
+                         W.Cast(sender.ServerPosition);
+                     }
+            };
+
+            
+            
             Obj_AI_Base.OnProcessSpellCast += delegate (Obj_AI_Base sender, GameObjectProcessSpellCastEventArgs args)
             {
                 if (ModeManager.Harass && args.Target != sender && sender.IsValidTarget(900) && W.IsReady && Q.IsReady &&  E.IsReady && IsW1 && sender.IsEnemy && sender.Type == GameObjectType.AIHeroClient)
