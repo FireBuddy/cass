@@ -71,7 +71,7 @@ namespace KoreanAIO.Champions
                      {
                          W.Cast(sender.ServerPosition);
                      }
-                     
+                     Q2 = new Spell.Skillshot(SpellSlot.Q, 1040, SkillShotType.Linear, 500, 1900, 60);
                      else if(Q.IsReady && IsW1)
                      {
                          Q.Cast(sender.ServerPosition);
