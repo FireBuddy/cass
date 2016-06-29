@@ -79,7 +79,7 @@ namespace KoreanAIO.Champions
                      {
                          W.Cast(sender.ServerPosition);
                      }
-                     else if(Q.IsReady && IsW1)
+                     else if(Q.IsReady && IsHarass2)
                      {
                          Q.Cast(sender.ServerPosition);
                      }
@@ -90,9 +90,10 @@ namespace KoreanAIO.Champions
             Obj_AI_Base.OnProcessSpellCast += delegate (Obj_AI_Base sender, GameObjectProcessSpellCastEventArgs args)
             {
                 if (ModeManager.Harass && args.Target != sender && sender.IsValidTarget(900) && W.IsReady && Q.IsReady &&  E.IsReady && IsW1 && sender.IsEnemy && sender.Type == GameObjectType.AIHeroClient)
-                {
-                 W.Cast(sender.ServerPosition);
-                }
+                     {
+                         W.Cast(sender.ServerPosition);
+                     }
+
             };
             
             Obj_AI_Base.OnBuffGain += delegate (Obj_AI_Base sender, Obj_AI_BaseBuffGainEventArgs args)
