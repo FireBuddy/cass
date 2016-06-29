@@ -659,8 +659,7 @@ namespace KoreanAIO.Champions
                         return;
                     }
                    
-                    CastE(Target);
-                    CastQ(Target);
+
                 }
                 else
                 {
