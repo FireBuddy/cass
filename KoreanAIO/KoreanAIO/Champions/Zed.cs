@@ -40,14 +40,14 @@ namespace KoreanAIO.Champions
         public Zed()
         {
             
-            QQ = new SpellBase(SpellSlot.Q, SpellType.Linear, 900)
+            Q = new SpellBase(SpellSlot.Q, SpellType.Linear, 900)
             {
                 CastDelay = 250,
                 Speed = 1700,
                 Width = 50
             };
-            QQ.SetSourceFunction(() => MyHero);
-            QQ.SetRangeCheckSourceFunction(() => MyHero);
+            Q.SetSourceFunction(() => MyHero);
+            Q.SetRangeCheckSourceFunction(() => MyHero);
             Q = new SpellBase(SpellSlot.Q, SpellType.Linear, 900)
             {
                 CastDelay = 250,
