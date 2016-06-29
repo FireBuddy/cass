@@ -39,7 +39,7 @@ namespace KoreanAIO.Champions
 
         public Zed()
         {
-            Q2 = new Spell.Skillshot(SpellSlot.Q, 900, SkillShotType.Linear, 250, 1700, 50);
+            
             Q = new SpellBase(SpellSlot.Q, SpellType.Linear, 900)
             {
                 CastDelay = 250,
