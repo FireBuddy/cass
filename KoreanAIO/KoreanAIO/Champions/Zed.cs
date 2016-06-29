@@ -40,6 +40,12 @@ namespace KoreanAIO.Champions
         public Zed()
         {
             
+            Q2 = new SpellBase(SpellSlot.Q, SpellType.Linear, 900)
+            {
+                CastDelay = 250,
+                Speed = 1700,
+                Width = 50
+};
             Q = new SpellBase(SpellSlot.Q, SpellType.Linear, 900)
             {
                 CastDelay = 250,
@@ -71,7 +77,6 @@ namespace KoreanAIO.Champions
                      {
                          W.Cast(sender.ServerPosition);
                      }
-                     Q2 = new Spell.Skillshot(SpellSlot.Q, 1040, SkillShotType.Linear, 500, 1900, 60);
                      else if(Q.IsReady && IsW1)
                      {
                          Q.Cast(sender.ServerPosition);
