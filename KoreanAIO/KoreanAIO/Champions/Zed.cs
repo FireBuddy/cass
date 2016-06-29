@@ -45,7 +45,7 @@ namespace KoreanAIO.Champions
                 CastDelay = 250,
                 Speed = 1700,
                 Width = 50
-};
+            };
             Q = new SpellBase(SpellSlot.Q, SpellType.Linear, 900)
             {
                 CastDelay = 250,
