@@ -63,7 +63,7 @@ namespace KoreanAIO.Champions
             
             Obj_AI_Base.OnBasicAttack += delegate (Obj_AI_Base sender, GameObjectProcessSpellCastEventArgs args)
             {
-                if (ModeManager.Harass && sender.IsValidTarget(900) && sender.Type == GameObjectType.AIHeroClient && sender.IsEnemy)
+                if ( sender.IsValidTarget(900) && sender.Type == GameObjectType.AIHeroClient && sender.IsEnemy)
                 {
                  if(Q.IsReady &&  E.IsReady && IsW1  && W.IsReady)
                  {
