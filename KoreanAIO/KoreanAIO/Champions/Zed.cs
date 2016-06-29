@@ -69,7 +69,7 @@ namespace KoreanAIO.Champions
                  {
                      W.Cast(sender.ServerPosition);
                  }
-                 if(Q.IsReady && W.Isoncooldown)
+                 if(Q.IsReady && !W.IsReady())
                  {
                      Q.Cast(sender.ServerPosition);
                  }
