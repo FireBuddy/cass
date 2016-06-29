@@ -39,7 +39,7 @@ namespace KoreanAIO.Champions
 
         public Zed()
         {
-            Q2 = new Spell(SpellSlot.Q, 900);
+            
             Q = new SpellBase(SpellSlot.Q, SpellType.Linear, 900)
             {
                 CastDelay = 250,
@@ -71,6 +71,7 @@ namespace KoreanAIO.Champions
                      {
                          W.Cast(sender.ServerPosition);
                      }
+                     Q2 = new Spell(SpellSlot.Q, 900);
                      else if(Q.IsReady && IsW1)
                      {
                          Q.Cast(sender.ServerPosition);
