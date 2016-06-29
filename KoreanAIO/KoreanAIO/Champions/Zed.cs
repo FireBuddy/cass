@@ -69,11 +69,7 @@ namespace KoreanAIO.Champions
                  {
                      W.Cast(sender.ServerPosition);
                  }
-                 if(Q.IsReady && !W.IsReady)
-                 {
-                     Q.Cast(sender.ServerPosition);
-                 }
-                 
+
                 }
             };
             Obj_AI_Base.OnProcessSpellCast += delegate (Obj_AI_Base sender, GameObjectProcessSpellCastEventArgs args)
