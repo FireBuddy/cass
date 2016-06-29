@@ -48,6 +48,14 @@ namespace KoreanAIO.Champions
             };
             Q.SetSourceFunction(() => MyHero);
             Q.SetRangeCheckSourceFunction(() => MyHero);
+            Q = new SpellBase(SpellSlot.Q, SpellType.Linear, 900)
+            {
+                CastDelay = 250,
+                Speed = 1700,
+                Width = 50
+            };
+            Q.SetSourceFunction(() => MyHero);
+            Q.SetRangeCheckSourceFunction(() => MyHero);
             W = new SpellBase(SpellSlot.W, SpellType.Linear, WRange)
             {
                 Speed = 1750,
