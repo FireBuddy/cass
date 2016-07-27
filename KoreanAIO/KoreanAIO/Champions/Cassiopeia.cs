@@ -481,7 +481,7 @@ namespace KoreanAIO.Champions
                         }
                     }
                 }
-                if (canCast || (ObjectManager.Player.Level < 2 && MyHero.ManaPercent >= 90 && ModeManager.Harass))
+                if (canCast || (ObjectManager.Player.Level < 2 && MyHero.ManaPercent >= 60 && ModeManager.Harass))
                 {
                     E.Cast(target);
                 }
