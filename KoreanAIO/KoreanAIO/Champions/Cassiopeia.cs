@@ -244,6 +244,7 @@ namespace KoreanAIO.Champions
             if (Q.IsReady)
             {
                 {
+                    CastE(Target);
                     CastQ(Target);
                 }
             }
@@ -268,11 +269,11 @@ namespace KoreanAIO.Champions
                 }
                 if (menu.CheckBox("Q"))
                 {
-                    CastQ2(Target);
+                    CastQ(Target);
                 }
                 if (menu.CheckBox("W"))
                 {
-                    CastW2(Target);
+                    CastW(Target);
                 }
                 if (menu.Slider("R") > 0)
                 {
@@ -408,30 +409,7 @@ namespace KoreanAIO.Champions
                 Q.Cast(target);
             }
         }
-        public void CastQ2(Obj_AI_Base target)
-        {
-            if (Q.IsReady && target != null)
-            {
-                if (IsPoisoned(target) && E.IsReady)
-                {
-                    return;
-                }
-                if (W.LastSentTime > 0)
-                {
-                    var arrivalTime = W.GetArrivalTime(W.LastEndPosition);
-                    if (Core.GameTickCount - W.LastSentTime <= arrivalTime)
-                    {
-                        return;
-                    }
-                    if (W.LastCastTime > 0 && Core.GameTickCount - W.LastCastTime <= arrivalTime)
-                    {
-                        return;
-                    }
-                }
-                var qPred = Q.GetPrediction(target);
-                Q.Cast(qPred.CastPosition + 30);
-            }
-        }
+
 
 
 
@@ -458,40 +436,6 @@ namespace KoreanAIO.Champions
                 W.Cast(target);
             }
         }
-        public void CastW2(Obj_AI_Base target)
-        {
-            if (W.IsReady && target != null)
-            {
-                if (Q.IsReady && IsPoisoned(target) && E.IsReady)
-                {
-                    return;
-                }
-                if (Q.LastSentTime > 0)
-                {
-                    var arrivalTime = Q.GetArrivalTime(Q.LastEndPosition);
-                    if (Core.GameTickCount - Q.LastSentTime <= arrivalTime)
-                    {
-                        return;
-                    }
-                    if (Q.LastCastTime > 0 && Core.GameTickCount - Q.LastCastTime <= arrivalTime)
-                    {
-                        return;
-                    }
-                }
-                var wPred = W.GetPrediction(target);
-                if (Player.Instance.Distance(wPred.CastPosition) > 499)
-                   if (target.IsFacing(MyHero))
-                   {
-                       W.Cast(wPred.CastPosition);
-                   }
-                   else 
-                   {
-                       W.Cast(wPred.CastPosition + 70);
-                   }
-            }
-        }
-
-
         public void CastE(Obj_AI_Base target)
         {
             if (E.IsReady && target != null)
