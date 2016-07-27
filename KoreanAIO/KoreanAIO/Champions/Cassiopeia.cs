@@ -92,9 +92,9 @@ namespace KoreanAIO.Champions
             
             Obj_AI_Base.OnBasicAttack += delegate (Obj_AI_Base sender, GameObjectProcessSpellCastEventArgs args)
             {
-                if (ModeManager.Harass && sender.IsValidTarget(800) && Q.IsReady && KeysMenu.KeyBind("HarassToggle") && sender.IsEnemy && sender.Type == GameObjectType.AIHeroClient)
+                if (ModeManager.Harass && sender.IsValidTarget(850) && Q.IsReady && KeysMenu.KeyBind("HarassToggle") && sender.IsEnemy && sender.Type == GameObjectType.AIHeroClient)
                 {
-                  Q.Cast(sender.ServerPosition + 20);
+                  Q.Cast(sender.ServerPosition);
                 }
             };
 
