@@ -244,8 +244,15 @@ namespace KoreanAIO.Champions
             if (Q.IsReady)
             {
                 {
-                    CastE(Target);
+                    
                     CastQ(Target);
+                }
+            }
+            if (E.IsReady)
+            {
+                {
+                    
+                    CastE(Target);
                 }
             }
             base.Flee();
