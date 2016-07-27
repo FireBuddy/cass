@@ -28,7 +28,7 @@ namespace KoreanAIO.Champions
                 CastDelay = 250,
                 Speed = 3000
             };
-            E = new SpellBase(SpellSlot.E, SpellType.Targeted, 730)
+            E = new SpellBase(SpellSlot.E, SpellType.Targeted, 700)
             {
                 Speed = 1900,
                 CastDelay = 125
@@ -169,14 +169,7 @@ namespace KoreanAIO.Champions
             {
                 AutomaticMenu.AddValue("R", new CheckBox("Use R on channeling spells"));
             }
-            MenuManager.AddDrawingsMenu();
-            {
-                Q.AddDrawings();
-                W.AddDrawings(false);
-                E.AddDrawings();
-                R.AddDrawings();
-                DrawingsMenu.AddValue("Toggles", new CheckBox("Draw toggles status"));
-            }
+
         }
 
 
